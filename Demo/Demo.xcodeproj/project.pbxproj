@@ -22,7 +22,6 @@
 		F170D6412C8622E80041827B /* Pangu in Frameworks */ = {isa = PBXBuildFile; productRef = F170D6402C8622E80041827B /* Pangu */; };
 		F170D6432C86231F0041827B /* Pangu in Frameworks */ = {isa = PBXBuildFile; productRef = F170D6422C86231F0041827B /* Pangu */; };
 		F170D6492C8628520041827B /* Pangu in Frameworks */ = {isa = PBXBuildFile; productRef = F170D6482C8628520041827B /* Pangu */; };
-		F197A9D92C877092004295D0 /* Pangu in Frameworks */ = {isa = PBXBuildFile; productRef = F197A9D82C877092004295D0 /* Pangu */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F197A9D92C877092004295D0 /* Pangu in Frameworks */,
 				F170D6492C8628520041827B /* Pangu in Frameworks */,
 				F170D6412C8622E80041827B /* Pangu in Frameworks */,
 				F170D63E2C8622B80041827B /* Pangu in Frameworks */,
@@ -143,7 +141,6 @@
 				F170D6402C8622E80041827B /* Pangu */,
 				F170D6422C86231F0041827B /* Pangu */,
 				F170D6482C8628520041827B /* Pangu */,
-				F197A9D82C877092004295D0 /* Pangu */,
 			);
 			productName = Demo;
 			productReference = F170D5E12C85DDE60041827B /* Demo.app */;
@@ -174,7 +171,6 @@
 			);
 			mainGroup = F170D5D82C85DDE60041827B;
 			packageReferences = (
-				F197A9D72C877092004295D0 /* XCRemoteSwiftPackageReference "Pangu" */,
 			);
 			productRefGroup = F170D5E22C85DDE60041827B /* Products */;
 			projectDirPath = "";
@@ -423,17 +419,6 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		F197A9D72C877092004295D0 /* XCRemoteSwiftPackageReference "Pangu" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/BBC6BAE9/Pangu";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
 		F170D6372C8621BF0041827B /* Pangu */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -457,11 +442,6 @@
 		};
 		F170D6482C8628520041827B /* Pangu */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Pangu;
-		};
-		F197A9D82C877092004295D0 /* Pangu */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F197A9D72C877092004295D0 /* XCRemoteSwiftPackageReference "Pangu" */;
 			productName = Pangu;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -14,21 +14,27 @@ public struct PanguTabView<TabType: Tabable, RouteType: Routable>: View {
     @State var routerWrapper: PanguRouter<TabType, RouteType>
     var tab: TabType
     
+    @State var selected: TabType
+    
     public init(tab: TabType) {
         self.tab = tab
+        self.selected = tab
         let router = Router<TabType, RouteType>(tab: tab)
         self.router = router
         self.routerWrapper = PanguRouter(router: router)
     }
     
     public var body: some View {
-        TabView(selection: self.router.tabBinding) {
+        TabView(selection: $selected) {
             ForEach(Array(TabType.allCases), id: \.self) {tab in
                 TabNavgationPage<TabType, RouteType, AnyView>(tab: tab) {
                     AnyView(LazyView(tab.rootPage()))
                 }
             }
         }
+        .onChange(of: selected, perform: { value in
+            self.router.tab = value
+        })
         .environmentObject(router)
         .environmentObject(routerWrapper)
     }
